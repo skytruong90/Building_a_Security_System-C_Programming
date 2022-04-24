@@ -35,6 +35,8 @@ int main(){
     else{
         printf("\n The password is incorrect");
     }
+    }
+    }
     scanf("\n%d", FakeInput);
 return 0;
  }
