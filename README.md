@@ -1,5 +1,5 @@
 # Title: Security System
-I build this security system in C programming.
+I build this security system coded in C
 
 # What does this do?
 The following program demonstrates a simple security system that requires the user to enter a password before they can access a restricted area. This program makes use of basic input/output functions, control structures, and string handling functions available in the C programming language.
@@ -10,3 +10,4 @@ When the program is executed, the user is prompted to enter a password. The pass
 This is a very basic security system that could be extended in many ways. For example, the program could be modified to store the secret password in a secure database or file, rather than hardcoding it in the source code. It could also be extended to include more advanced security features, such as encryption or multi-factor authentication. However, this example program demonstrates the basic principles of building a security system using C programming.
 
 # How To Use:
+To run the C program, you need a C compiler installed on your computer. 
