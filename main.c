@@ -1,43 +1,30 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-int main(){
-    printf("\n Welcome to The Security System");
-    int password;
-    int FakeInput;
-    printf("\n\n Please type your password ");
-    scanf("%d", &password);
+int main() {
+  char password[20];
+  int authenticated = 0;
 
-    if(password <= 12345 && password >= 12345 ){
-        printf("\n The password is correct");
-        printf("\n Welcome and Thank you for cracking the code");
-    }
-    else{
-        printf("\n The password is incorrect");
-        printf("\n You will have 2 more tries!!");
-        printf("\n Try again");
-        scanf("%d", &password);
+  printf("Enter password: ");
+  scanf("%s", password);
 
-   if(password <= 12345 && password >= 12345 ){
-        printf("\n The password is correct");
-        printf("\n Welcome and Thank you for cracking the code");
-    }
-    else{
-        printf("\n The password is incorrect");
-        printf("\n You will have 1 more try!!");
-        printf("\n Try again");
-        scanf("%d", &password);
-        
-    if(password <= 12345 && password >= 12345 ){
-        printf("\n The password is correct");
-        printf("\n Welcome and Thank you for cracking the code");
-    }
-    else{
-        printf("\n The password is incorrect");
-    }
-    }
-    }
-    scanf("\n%d", FakeInput);
-return 0;
- }
+  // Perform some security checks on the password
+  if (strlen(password) < 8) {
+    printf("Password must be at least 8 characters long\n");
+  } else if (strcmp(password, "mysecretpassword") == 0) {
+    authenticated = 1;
+  } else {
+    printf("Invalid password\n");
+  }
+
+  // Check if user is authenticated
+  if (authenticated) {
+    printf("Access granted!\n");
+    // Code to access the restricted area goes here
+  } else {
+    printf("Access denied!\n");
+  }
+
+  return 0;
 }
+
